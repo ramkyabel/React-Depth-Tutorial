@@ -1,11 +1,11 @@
 import React from 'react';
-import HelloWorld from './HelloWorld'
+import HelloWorldList from './HelloWorldList'
 
 const App = () => {
-  return (<div className="App">
-  			<HelloWorld name="Ramky Comp"/>
-  			<HelloWorld name="Second Random NAME" />
-  		</div>);
+  return (
+  	<div className="App">
+			<HelloWorldList />
+		</div>);
 };
 
 export default App;
