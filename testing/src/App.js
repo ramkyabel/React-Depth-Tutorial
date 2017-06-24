@@ -3,7 +3,7 @@ import HelloWorld from './HelloWorld'
 
 const App = () => {
   return (<div className="App">
-  			<HelloWorld name="Ramky"/>
+  			<HelloWorld name="Ramky Comp"/>
   		</div>);
 };
 
