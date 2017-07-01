@@ -26,7 +26,31 @@ describe (HelloWorldList, () => {
 	it ('contains the same number of HelloWorld components as greetings', () => {
 		const helloWorlds = component.find (HelloWorld).length;
 		const greetings   = component.state('greetings').length;
-		console.log(component);
+		// console.log(component);
 		expect (helloWorlds).toEqual (greetings);
+	});
+
+	it ('adds another greeting when the add greeting function is called', () => {
+		const greetingsBefore = component.state ('greetings').length;
+		const componentsBefore = component.find (HelloWorld).length;
+
+		component.instance().addGreeting	('Added');
+
+		const greetingsAfter = component.state ('greetings').length;
+		const componentsAfter = component.find (HelloWorld).length;
+
+		expect(greetingsAfter).toBeGreaterThan(greetingsBefore);
+		expect(componentsAfter).toBeGreaterThan(componentsBefore);
+
+	});	
+
+	it ('removes a greeting from the list when the remove greeting functions' +
+		'is being called.', () => {
+			const before = component.find (HelloWorld).length;
+			const greetRemove = 
+				component.state('greetings')[component.state('greetings').length - 1];
+			component.instance ().removeGreeting(greetRemove);
+			const after = component.find (HelloWorld).length;
+			expect (after).toBeLessThan (before);
 	});
 });
