@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class AddGreeter extends _react.Component {
+	constructor(props) {
+		super(props);
+		this.state = { greetingName: '' };
+		this.handleUpdate = this.handleUpdate.bind(this);
+		this.addGreeting = this.addGreeting.bind(this);
+		this.removeGreeting = this.removeGreeting.bind(this);
+	}
+	addGreeting() {
+		this.props.addGreeting(this.state.greetingName);
+		this.setState({ greetingName: '' });
+	}
+	removeGreeting() {
+		this.props.removeGreeting(this.state.greetingName);
+		this.setState({ greetingName: '' });
+	}
+	handleUpdate(event) {
+		this.setState({ greetingName: event.target.value });
+	}
+	render() {
+		return (
+			_react2.default.createElement('div', { className: 'AddGreeter', __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this },
+				_react2.default.createElement('input', {
+					type: 'text',
+					onChange: this.handleUpdate,
+					value: this.state.greetingName, __source: { fileName: _jsxFileName, lineNumber: 26 }, __self: this }), '\\xA0\\xA0',
+
+
+
+				_react2.default.createElement('button', { className: 'add', onClick: this.addGreeting, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this }, ' Add '),
+				_react2.default.createElement('button', { className: 'remove', onClick: this.removeGreeting, __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this }, 'Remove')));
+
+
+	}} renders and matches our snapshot 1`] = `
+<div
+  className="AddGreeter"
+>
+  <input
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+    
+  <button
+    className="add"
+    onClick={[Function]}
+  >
+     Add 
+  </button>
+  <button
+    className="remove"
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</div>
+`;

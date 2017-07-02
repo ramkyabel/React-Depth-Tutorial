@@ -30,8 +30,8 @@ class AddGreeter extends Component {
 				/>
 					
 				&nbsp;&nbsp;
-				<button onClick={this.addGreeting}> Add </button>
-				<button onClick={this.removeGreeting}>Remove</button>
+				<button className="add" onClick={this.addGreeting}> Add </button>
+				<button className="remove" onClick={this.removeGreeting}>Remove</button>
 			</div>	
 		);
 	}

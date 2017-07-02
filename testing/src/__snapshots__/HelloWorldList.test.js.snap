@@ -46,11 +46,13 @@ exports[`class HelloWorldList extends _react.Component {
     />
       
     <button
+      className="add"
       onClick={[Function]}
     >
        Add 
     </button>
     <button
+      className="remove"
       onClick={[Function]}
     >
       Remove
